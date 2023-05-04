@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fc0afd0c35.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="Header">
+    <div class="container">
+        <nav>
+            <img src="Images/logo.png" class="logo">
+            
+                <ul id="sidemenu">
+                   <li><a href="#Header">Home</a></li> 
+
+                   <li><a href="#about">About</a> </li> 
+
+                    <li><a href="#services">Services</a></li>
+
+                   <li><a href="#portfolio">Portfolio</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+                
+                    <i class="fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        
+        </nav>
+
+        <div class="header-text">
+        <p>Information Technology Graduate</p>
+        <h1>Hi, I'm <span>Tshiamo</span><br> Mosuoe from South Africa</h1>
+        </div>
+    </div>
+
+</div>
+
+<!-----------------------------------about------------->
+    <div id="about">
+       <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+                <img src="Images/IMG-20230417-WA0032.jpg">
+            </div>
+
+            <div class="about-col-2">
+                 <h1 class="subtitle">About Me</h1>
+                 <p>I Tshiamo Prudence Mosuoe an ICT
+                    graduate who specialise in Intelligent
+                    Industrial Systems and graduated towards
+                    my Diploma in ICT in April 2023
+                    at Tshwane University of Technology.I am
+                    goal orientated individual who believes in
+                    herself to do the required tasks given by
+                    heart with dedication and a team player,
+                    always eagerly to learn from other people, I
+                    can mediate and execute any given task
+                    without second asking any orders given.
+                    </p>
+                 <div class="tab-title">
+                    <p  class="tab-links active-link" onclick="opentab('Skills')">Skills </p>
+                    <p  class="tab-links" onclick="opentab('Experience')">Experience </p>
+                    <p  class="tab-links" onclick="opentab('Education')">Education </p>
+                 </div>
+
+                 <div class="tab-contents  active-tab" id="Skills">
+                    <ul>
+                        <li><span>Microsoft Office</span><br></li>
+                        <li><span>Python Programming</span><br></li>
+                        <li><span>C++</span><br></li>
+                        <li><span>AI</span><br></li>
+                        <li><span>Machine Learning</span><br></li>
+                        <li><span>Deep Learning</span><br></li>
+                        <li><span>HTML</span><br></li>
+                        <li><span>CSS</span><br></li>
+                    </ul>
+                 </div>
+
+                 <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>Aug 2022- Current</span><br>4IR TUT</li>
+                        <li><span>Aug 2022-Nov 2022</span><br>CXI-Africa</li>
+                    </ul>
+                 </div>
+
+                 <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Aug 2022- Aug 2022</span><br>3D Printing</li>
+                        <li><span>Jan 2018 - Dec 2022</span><br>N DIP Information Technology(Intelligence Industrial System)</li>
+                        <li><span>Jan 2011 - Dec 2015</span><br>National Senior Certificate Grade12</li>
+                    </ul>
+                 </div>
+
+                </div>
+
+          </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <!--------------------------------------services--------->
+    <div id="services">
+        <div class="container"></div>
+        <h1 class="subtitle">MY Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, ipsam rem. Quia provident, explicabo ab impedit deleniti consequuntur libero. Ipsum. </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>AI Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, ipsam rem. Quia provident, explicabo ab impedit deleniti consequuntur libero. Ipsum. </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>ML Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, ipsam rem. Quia provident, explicabo ab impedit deleniti consequuntur libero. Ipsum. </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+   <!---------------------------------portfolio--------------->
+   <div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">MY Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/IMG_4448.JPG">
+                <div class="layer">
+                    <h3>Delivery Drone</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In impedit tenetur maiores dignissimos! Qui error provident accusamus tempore, animi ipsa vitae magnam rem? Dignissimos consequuntur nisi nesciunt provident. Fugit, placeat?
+                     Download it from playstore
+                    </p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/Screenshot 2023-03-17 105126.png">
+                <div class="layer">
+                    <h3>Machine Learning</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In impedit tenetur maiores dignissimos! Qui error provident accusamus tempore, animi ipsa vitae magnam rem? Dignissimos consequuntur nisi nesciunt provident. Fugit, placeat?
+                     Download it from playstore
+                    </p>
+                    <a href="http://group6.pythonanywhere.com/"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/Screenshot 2023-03-17 105819.png">
+                <div class="layer">
+                    <h3>Dolly Poultry Farm Website</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In impedit tenetur maiores dignissimos! Qui error provident accusamus tempore, animi ipsa vitae magnam rem? Dignissimos consequuntur nisi nesciunt provident. Fugit, placeat?
+                     Download it from playstore
+                    </p>
+                    <a href="http://tshiamo.pythonanywhere.com/"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+   </div>
+
+   <!---------------------------contact---------------------------------------------------------------->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+             <h1 class="sub-tittle">Contact Me</h1>
+             <p><i class="fa-solid fa-paper-plane"></i>tshiamomosuoe1998@gmail.com</p>
+             <p><i class="fa-solid fa-phone"></i>0813791172</p>
+             <div class="social-icons">
+             <a href="https://github.com/Tshiamo199"><i class="fa-brands fa-github"></i></a>
+             <a href="https://www.linkedin.com/in/tshiamo-mosuoe-3a9376243/"><i class="fa-brands fa-linkedin"></i></a>
+             </div>
+  
+             <a href="Images/CV.pdf" download class="btn btn2">Download CV</a>
+
+            </div>
+            <div class="contact-right">
+                <form  name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea><br>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright @Kevin. Made with Easy Toturials </p>
+    </div>
+  </div>
+  
+
+
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxjRQt7fxgdqSDa3QkR-e68AbDD30AC7YhjKvpBNJiqYyjWqYmvM0UwaZ7UODnFOZaF/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTNL = "Message sent successfully"
+            setTimeout(function() {
+                msg.innerHTML = ""
+                
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
